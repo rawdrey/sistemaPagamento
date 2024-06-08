@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace sistemaPagamento
 {
-    class Transferência
-: Transacao
+    class Transferencia : Transacao
     {
         public string NumeroContaOrigem { get; set; }
         public string NumeroContaDestino { get; set; }
-        public TransferenciaBancaria(string idTransacao, decimal valor, DateTime dataTransacao, string numeroContaOrigem, string numeroContaDestino)
-    : base(idTransacao, valor, dataTransacao)
+
+        public Transferencia(string idTransacao, decimal valor, DateTime dataTransacao, string numeroContaOrigem, string numeroContaDestino)
+            : base(idTransacao, valor, dataTransacao)
         {
             NumeroContaOrigem = numeroContaOrigem;
             NumeroContaDestino = numeroContaDestino;
@@ -22,4 +18,5 @@ namespace sistemaPagamento
         {
             return 10.00m;
         }
+    }
 }
